@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  static const Color _seed = Color(0xFF1565C0);
+  static const Color _seed = Color.fromARGB(255, 0, 184, 148);
 
   ThemeData getTheme() => ThemeData(
     useMaterial3: true,

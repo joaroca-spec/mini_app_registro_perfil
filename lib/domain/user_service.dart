@@ -8,7 +8,6 @@ class UserService {
     final db = await DatabaseConfig.database;
     final map = user.toMap();
     map.remove('id');
-    map['created_at'] = DateTime.now().toIso8601String();
     return db.insert(_table, map);
   }
 

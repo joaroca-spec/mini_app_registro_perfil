@@ -31,8 +31,8 @@ class DatabaseConfig {
         email TEXT,
         phone TEXT,
         fecha_nacimiento TEXT,
-        genero TEXT,
-        created_at TEXT
+        avatar_url TEXT,
+        created_at TEXT DEFAULT (datetime('now'))
       )
     ''');
   }

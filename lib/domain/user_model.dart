@@ -6,8 +6,7 @@ class UserModel {
     this.email,
     this.phone,
     this.cumpleanos,
-    this.genero,
-    this.createdAt,
+    this.avatarUrl,
   });
 
   final int? id;
@@ -16,8 +15,7 @@ class UserModel {
   final String? email;
   final String? phone;
   final String? cumpleanos;
-  final String? genero;
-  final String? createdAt;
+  final String? avatarUrl;
 
   Map<String, dynamic> toMap() {
     return {
@@ -27,8 +25,7 @@ class UserModel {
       'email': email,
       'phone': phone,
       'fecha_nacimiento': cumpleanos,
-      'genero': genero,
-      'created_at': createdAt,
+      'avatar_url': avatarUrl,
     };
   }
 
@@ -40,8 +37,7 @@ class UserModel {
       email: map['email'] as String?,
       phone: map['phone'] as String?,
       cumpleanos: map['fecha_nacimiento'] as String?,
-      genero: map['genero'] as String?,
-      createdAt: map['created_at'] as String?,
+      avatarUrl: map['avatar_url'] as String?,
     );
   }
 
@@ -52,8 +48,7 @@ class UserModel {
     String? email,
     String? phone,
     String? cumpleanos,
-    String? genero,
-    String? createdAt,
+    String? avatarUrl,
   }) {
     return UserModel(
       id: id ?? this.id,
@@ -62,8 +57,7 @@ class UserModel {
       email: email ?? this.email,
       phone: phone ?? this.phone,
       cumpleanos: cumpleanos ?? this.cumpleanos,
-      genero: genero ?? this.genero,
-      createdAt: createdAt ?? this.createdAt,
+      avatarUrl: avatarUrl ?? this.avatarUrl,
     );
   }
 }
