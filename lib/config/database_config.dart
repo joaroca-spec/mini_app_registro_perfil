@@ -5,7 +5,7 @@ import 'package:path_provider/path_provider.dart';
 class DatabaseConfig {
   DatabaseConfig._();
 
-  static const String _dbName = 'registro_perfiles.db';
+  static const String _dbName = 'usuarios.db';
   static const int _version = 1;
 
   static Database? _db;
@@ -24,7 +24,7 @@ class DatabaseConfig {
 
   static Future<void> _onCreate(Database db, int version) async {
     await db.execute('''
-      CREATE TABLE users (
+      CREATE TABLE usuarios (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         cedula TEXT,
         name TEXT NOT NULL,
