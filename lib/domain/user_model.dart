@@ -5,7 +5,6 @@ class UserModel {
     required this.name,
     this.email,
     this.phone,
-    this.cumpleanos,
     this.avatarUrl,
   });
 
@@ -14,7 +13,6 @@ class UserModel {
   final String name;
   final String? email;
   final String? phone;
-  final String? cumpleanos;
   final String? avatarUrl;
 
   Map<String, dynamic> toMap() {
@@ -24,7 +22,6 @@ class UserModel {
       'name': name,
       'email': email,
       'phone': phone,
-      'fecha_nacimiento': cumpleanos,
       'avatar_url': avatarUrl,
     };
   }
@@ -36,7 +33,6 @@ class UserModel {
       name: map['name'] as String,
       email: map['email'] as String?,
       phone: map['phone'] as String?,
-      cumpleanos: map['fecha_nacimiento'] as String?,
       avatarUrl: map['avatar_url'] as String?,
     );
   }
@@ -47,7 +43,6 @@ class UserModel {
     String? name,
     String? email,
     String? phone,
-    String? cumpleanos,
     String? avatarUrl,
   }) {
     return UserModel(
@@ -56,7 +51,6 @@ class UserModel {
       name: name ?? this.name,
       email: email ?? this.email,
       phone: phone ?? this.phone,
-      cumpleanos: cumpleanos ?? this.cumpleanos,
       avatarUrl: avatarUrl ?? this.avatarUrl,
     );
   }

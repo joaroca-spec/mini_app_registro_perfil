@@ -46,6 +46,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           SafeArea(
+            bottom: false,
             child: Column(
               children: [
                 const SizedBox(height: 48),
@@ -91,7 +92,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(24, 28, 24, 32),
+                      padding: const EdgeInsets.fromLTRB(24, 28, 24, 75),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [

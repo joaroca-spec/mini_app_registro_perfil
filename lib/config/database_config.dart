@@ -30,7 +30,6 @@ class DatabaseConfig {
         name TEXT NOT NULL,
         email TEXT,
         phone TEXT,
-        fecha_nacimiento TEXT,
         avatar_url TEXT,
         created_at TEXT DEFAULT (datetime('now'))
       )

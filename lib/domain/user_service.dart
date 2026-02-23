@@ -4,11 +4,11 @@ import 'package:app_registro_perfil/config/database_config.dart';
 class UserService {
   static const String _table = 'usuarios';
 
-  Future<int> add(UserModel user) async {
+  Future<void> add(UserModel user) async {
     final db = await DatabaseConfig.database;
     final map = user.toMap();
     map.remove('id');
-    return db.insert(_table, map);
+    await db.insert(_table, map);
   }
 
   Future<List<UserModel>> list() async {
